@@ -84,13 +84,27 @@ ___
 
 Relaciones entre Tablas:
 
-Usuarios y Roles: Relación de muchos a muchos mediante la tabla intermedia Usuarios_Roles.
-Usuarios y Direcciones: Relación de uno a muchos a través de la tabla Usuarios_Direcciones.
-Usuarios y Tarjetas: Relación de uno a muchos mediante Usuarios_Tarjetas.
-Pedidos y Productos: Relación de muchos a muchos mediante Pedidos_Productos.
-Pedidos y Direcciones/Tarjetas: Cada pedido está asociado a una única dirección de envío y a una única tarjeta de pago.
+`Usuarios y Roles`
+Relación de muchos a muchos mediante la tabla intermedia Usuarios_Roles.
+
+`Usuarios y Direcciones` 
+Relación de uno a muchos a través de la tabla Usuarios_Direcciones.
+
+`Usuarios y Tarjetas` 
+Relación de uno a muchos mediante Usuarios_Tarjetas.
+
+`Pedidos y Productos` 
+Relación de muchos a muchos mediante Pedidos_Productos.
+
+`Pedidos y Direcciones/Tarjetas` 
+Cada pedido está asociado a una única dirección de envío y a una única tarjeta de pago.
 
 Los roles se relacionan con los usuarios a través de una relación de muchos a muchos.
 Un usuario puede asociar varias tarjetas a su cuenta.
 Cada pedido está relacionado con uno o varios productos, y un producto puede formar parte de varios pedidos.
 
+___
+<div aling="center">
+    <img src="/img/logo.png">
+</div>
+___
