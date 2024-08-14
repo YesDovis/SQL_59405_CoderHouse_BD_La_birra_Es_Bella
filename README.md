@@ -82,29 +82,62 @@ ___
 
 // se utilizo para el esquema https://online.visual-paradigm.com/ es de pago no permite descarga se realiza captura de pantalla, se procede a explicar las Relaciones entre Entidades que no me permitio la web//
 
-Relaciones entre Tablas:
+## Explicacion 
 
-`Usuarios y Roles`
-Relación de muchos a muchos mediante la tabla intermedia Usuarios_Roles.
+`Usuarios tiene Usuarios_Roles`
 
-`Usuarios y Direcciones` 
-Relación de uno a muchos a través de la tabla Usuarios_Direcciones.
+Un usuario puede tener múltiples roles asignados a través de la entidad "Usuarios_Roles". Esta relación es de tipo **uno a muchos** (1), donde un usuario puede tener varios roles, pero un rol específico solo puede estar vinculado a un usuario dentro de esta tabla intermedia.
 
-`Usuarios y Tarjetas` 
-Relación de uno a muchos mediante Usuarios_Tarjetas.
+`Roles pertenece a Usuarios_Roles`
 
-`Pedidos y Productos` 
-Relación de muchos a muchos mediante Pedidos_Productos.
+Un rol puede estar asociado a múltiples usuarios a través de la entidad "Usuarios_Roles". Esta relación también es de tipo **uno a muchos** (1), donde un rol puede ser asignado a varios usuarios diferentes.
 
-`Pedidos y Direcciones/Tarjetas` 
-Cada pedido está asociado a una única dirección de envío y a una única tarjeta de pago.
+`Usuarios tiene Usuarios_Direcciones`
 
-Los roles se relacionan con los usuarios a través de una relación de muchos a muchos.
-Un usuario puede asociar varias tarjetas a su cuenta.
-Cada pedido está relacionado con uno o varios productos, y un producto puede formar parte de varios pedidos.
+Un usuario puede tener varias direcciones registradas mediante la entidad "Usuarios_Direcciones". 
+La relación es de tipo **uno a muchos** (1), lo que significa que un usuario puede tener varias direcciones asociadas.
+
+`Direcciones pertenece a Usuarios_Direcciones`
+
+Una dirección específica puede estar vinculada a múltiples usuarios, pero en este contexto, una dirección está asociada directamente a un usuario mediante la entidad "Usuarios_Direcciones". Esta relación es de tipo **uno a muchos** (1).
+
+
+`Usuarios tiene Usuarios_Tarjetas`
+
+Un usuario puede tener varias tarjetas registradas a través de la entidad "Usuarios_Tarjetas". Esta es una relación de tipo **uno a muchos** (1), donde un usuario puede tener varias tarjetas asociadas.
+
+`Tarjetas pertenece a Usuarios_Tarjetas`
+
+Una tarjeta puede estar vinculada a múltiples usuarios, pero en este contexto, una tarjeta específica está asociada a un único usuario mediante la entidad "Usuarios_Tarjetas". Esta relación también es de tipo **uno a muchos** (1).
+
+`Usuarios realiza Pedidos`
+
+Un usuario puede realizar múltiples pedidos. Esta relación es de tipo **uno a muchos** (1), donde un usuario puede hacer varios pedidos.
+
+`Direcciones es para Pedidos`
+
+Un pedido está asociado a una única dirección de entrega. Esta relación es de tipo **uno a uno (1:1)**, donde un pedido específico se envía a una única dirección.
+
+`Tarjetas se paga con Pedidos`
+
+Un pedido se paga con una única tarjeta. Esta relación es de tipo **uno a uno (1:1)**, donde cada pedido se asocia a una tarjeta específica para el pago.
+
+`Pedidos incluye Pedidos_Productos`
+
+Un pedido puede incluir múltiples productos, a través de la entidad "Pedidos_Productos". Esta relación es de tipo **uno a muchos** (1), donde un pedido puede incluir varios productos.
+
+`Productos es parte de Pedidos_Productos`
+
+Un producto puede ser parte de múltiples pedidos a través de la entidad "Pedidos_Productos". Esta relación también es de tipo **uno a muchos** (1
+), donde un producto puede ser incluido en diferentes pedidos.
+
 
 ___
+
 <div aling="center">
     <img src="/img/logo.png">
 </div>
 ___
+
+
+** © [DOVIS YESICA] 2024. Todos los derechos reservados.**
